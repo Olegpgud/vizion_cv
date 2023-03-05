@@ -24,7 +24,7 @@ def find_cv(img_name):
     obj_ect_3 = obj_3_cascade.detectMultiScale(gray, 1.3, 5) # выполняем поиск объекта по изображению
     obj_ect_2 = obj_2_cascade.detectMultiScale(gray, 1.3, 5) 
     end = time.time() - start
-    print(end)
+    print(round(end*1000))
     for (x,y,w,h) in obj_ect_3:
         img = cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2) # выделяем объект на изображении
     for (x,y,w,h) in obj_ect_2:

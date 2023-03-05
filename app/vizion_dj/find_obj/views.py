@@ -43,7 +43,7 @@ def upload_images(request):
             res_img,time=find_cv(img_name)
             cv2.imwrite('/home/olegpgud/work_test/python_test/vizion_dj/media/data/result.png', res_img) # сохраняем изображение
             img_obj2='../media/data/result.png'
-            return render(request, 'index.html', {'form': form, 'img_obj': img_obj, 'img_obj2': img_obj2, 'time': time})
+            return render(request, 'index.html', {'form': form, 'img_obj': img_obj, 'img_obj2': img_obj2, 'time': round(time*1000)})
     else:
         form = ImageForm
 
