@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    
+<form method = "post", enctype="multipart/form-data">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit"> Run</button>
+</form>
+
+{% if img_obj %}
+  <h3>time : {{time}}</h3>
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:400px">
+{% endif %}
+
+{% if img_obj2 %}
+  <img src={{img_obj2}} alt="connect" style="max-height:400px">
+{% endif %}
+
+
+
+
+
+</body>
+</html>
